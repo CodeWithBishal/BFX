@@ -1,0 +1,131 @@
+<!-- name: Bishal -->
+<!-- email: codewithbishal@gmail.com -->
+<!-- class: 10 -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Live Chat</title>
+    <style>
+        body {
+            background: #7F7FD5;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        #head-container,
+        #container-footer {
+            background: #6190e8bb;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a7bfe8c2, #6190e8c5);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a7bfe8a1, #6190E8);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+
+        #container-body .list-group-item {
+            background-color: rgb(231, 231, 231);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex flex-column mt-2 w-50">
+        <div class="shadow">
+            <div class="card border-0" id="head-container">
+                <div class="card-body text-center d-flex align-items-center justify-content-center">
+                    <div class=" p-2 rounded-3 d-flex justify-content-center">
+                        <span class="fa-stack fa-2x rounded-3 border-success d-flex align-items-center">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <h2>Live Chat with Avinash</h2>
+                </div>
+            </div>
+            <div class="card border-0" id="container-body">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item w-50 rounded-pill">
+                            <h6 class="mt-1">Hello, Bishal</h6>
+                        </li>
+                        <div class="float-right">
+                            <li class="list-group-item w-50 float-end my-5 rounded-pill">
+                                <h6 class="mt-1">Hi, Avinash</h6>
+                            </li>
+                        </div>
+                        <li class="list-group-item w-50 rounded-pill">
+                            <h6 class="mt-1">How are You?</h6>
+                        </li>
+                        <div class="float-right">
+                            <li class="list-group-item w-50 float-end my-5 rounded-pill">
+                                <h6 class="mt-1">I am fine and you?</h6>
+                            </li>
+                        </div>
+                        <li class="list-group-item w-50 rounded-pill">
+                            <h6 class="mt-1">I am good!</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card border-0 p-4 flex-row justify-content-between" id="container-footer">
+                <div class="mb-3 col-md-9">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Write Message...">
+                </div>
+                <div
+                    class="col-md-3 text-center d-flex flex-row align-content-center justify-content-center align-items-center align-items-baseline">
+                    <button class="btn btn-primary" id="btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            swal({
+                title: "Are you sure?",
+                text: "Once sent, you will not be able to delete this message!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Your message has been sent!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your message could not be sent!", {
+                            icon: "error",
+                        });
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!-- Email: codewithbishal@gmail.com
+Name: Bishal Das -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* styling starts  */
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("https://images.unsplash.com/photo-1562257669-82535d89060c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIyOTc3MTI4&ixlib=rb-1.2.1&q=80&w=1600");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 110%;
+            background-position: center;
+            overflow-y: scroll;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            padding: 2%;
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            font-size: 40px;
+            background-color: rgb(0, 0, 0, 0.3);
+            margin: auto auto;
+            font-family: cursive;
+        }
+
+        .container {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 40px;
+            margin: 2% auto;
+            position: relative;
+            width: 500px;
+            height: 510px;
+            background-color: rgb(255, 255, 255, 0.3);
+            max-width: 100%;
+        }
+
+        h3 {
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .container input {
+            padding: 20px;
+            margin: 5px;
+            width: 90%;
+            height: 35px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        .btn {
+            background-color: black;
+            border-radius: 5px;
+            color: #fff;
+            border: 0;
+            outline: 0;
+            height: 55px !important;
+            font-size: medium;
+        }
+        /* styling ends  */
+    </style>
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Registration Form using HTML & CSS</h1>
+    </div>
+    <div class="container">
+        <h3><u>Register</u></h3>
+        <!-- form started -->
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+            <input type="submit" value="Register" class="btn">
+        </form>
+        <!-- form ended  -->
+    </div>
+</body>
+
+</html>

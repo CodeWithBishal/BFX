@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+        }
+        h2{
+            padding-top: 13%;
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 10%;
+        }
+        .count{
+            width: 50%;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 25px;
+            display: flex;
+            list-style: none;
+            letter-spacing: 5px;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            font-weight: 900;
+            color: #fff;
+        }
+        .image{
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1455732063391-5f50f4df1854?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+        <h2>Happy Birthday in </h2>
+        <ul class="count">
+            <li><p id="time-1"></p></li>
+            <li><p id="time-2"></p></li>
+            <li><p id="time-3"></p></li>
+            <li><p id="time-4"></p></li>
+        </ul>
+    </div>
+    <script>
+        var countDownDate = new Date("Jan 10, 2022 0:0:0");
+        var x = setInterval(function() {
+        var now = new Date().getTime();
+        var TimeLeft = countDownDate - now;
+        var days = Math.floor(TimeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((TimeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((TimeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((TimeLeft % (1000 * 60)) / 1000);
+        document.getElementById("time-1").innerHTML = days + "d :";
+        document.getElementById("time-2").innerHTML = + hours + "h :";
+        document.getElementById("time-3").innerHTML = + minutes + "m :";
+        document.getElementById("time-4").innerHTML = + seconds + "s";        
+        }, 1000);
+        </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+Name: Bishal Das
+Email: Codewithbishal@gmail.com
+Hosted on: https://codewithbishal.com/BFX/
+ -----------------------------------
+Details of the uploaded files
+ -----------------------------------
+Main Zip -> BFX -> 2 folder details, assets. and 8 files.
+
+8 Files -> .htaccess -> codes given in this page is used to remove the .php extension from the url to beautify the URLs.
+
+about.php -> About Page.
+
+contact.php -> Contact Page.
+
+footer.php -> Contains CDN files which are required on every pages
+
+header.php -> contains the Menu for mobile and desktop.
+
+index.php -> Homepage Page.
+
+indian-culture.php -> This page contains all the states and UTs, and you can click on any of the states to view the details of that state. All the images linked in this file are deferred to decrease the load time of the website
+
+shop.php -> Contains some local products which you can buy to support the local sellers
+
+folder assets -> 4 folders -> css, image, js, shop
+
+folder css -> contain the css file (style.css) used to style the whole website.
+
+folder image -> contains all the images of each of the states and UTs.
+
+folder js -> contains the file used to defer the images to load the website faster.
+
+folder details -> contains 1 folder and 36 files -> the 1 folder contains the template of all of the pages (inc.php). -> other 36 files are used to render the details of each state when clicked on the "know more" button on (indian-culture.php) page.
